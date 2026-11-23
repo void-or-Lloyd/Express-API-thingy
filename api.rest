@@ -1,6 +1,18 @@
-GET http://127.0.0.1:3000/v1/health HTTP/1.1
+POST http://127.0.0.1:3000/v1/client/register HTTP/1.1
 content-type: application/json
 
 {
-    "hash": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImlzZzIzb3M3MGF1aWkxdmw0anRzIiwibmFtZSI6InZvaWQiLCJpYXQiOjE3OTQ5MTA4NTd9.VIHbthUFqjvZd7NlxNJQlDFlfKDBF5qyAmNwvvCln7g"
+    "username": "Sorren"
 }
+
+###
+
+GET http://127.0.0.1:3000/v1/client/test HTTP/1.1
+content-type: application/json
+Cookie: "token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InFqMHJubTBnZzExYTQxNnM4dGFrIiwiaWF0IjoxNzk1NDMwNjMwfQ.CkAlJGvH-Umg2SGLsGLfbP3Tdb47e2c7Q-SOpb2RbnM; Path=/; HttpOnly"
+
+
+
+# {
+#     "hash": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImlzZzIzb3M3MGF1aWkxdmw0anRzIiwibmFtZSI6InZvaWQiLCJpYXQiOjE3OTQ5MTA4NTd9.VIHbthUFqjvZd7NlxNJQlDFlfKDBF5qyAmNwvvCln7g"
+# }

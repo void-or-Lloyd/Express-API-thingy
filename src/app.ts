@@ -4,15 +4,17 @@ import indexRouter from "./routes/index.js"
 import morgan from "morgan"
 import db from "./config/db.js"
 import clientRouter from "./routes/clients.routes.js"
-import { validate } from "./middleware/validate.js"
+
+import cookieParser from "cookie-parser"
 
 const app = express()
 
 app.use(express.json({limit: "20kb"}))
 app.use(devLogger)
+app.use(cookieParser())
 app.use(morgan("combined", {stream: writeLogger}))
 
-app.use("/v1", /* validate, */ indexRouter)
+app.use("/v1", indexRouter)
 app.use("/v1/client", clientRouter)
 
 
