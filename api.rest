@@ -1,0 +1,6 @@
+GET http://127.0.0.1:3000/v1/health HTTP/1.1
+content-type: application/json
+
+{
+    "hash": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImlzZzIzb3M3MGF1aWkxdmw0anRzIiwibmFtZSI6InZvaWQiLCJpYXQiOjE3OTQ5MTA4NTd9.VIHbthUFqjvZd7NlxNJQlDFlfKDBF5qyAmNwvvCln7g"
+}
