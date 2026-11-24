@@ -4,6 +4,7 @@ import indexRouter from "./routes/index.js"
 import morgan from "morgan"
 import db from "./config/db.js"
 import clientRouter from "./routes/clients.routes.js"
+import gameRouter from "./routes/games.routes.js"
 
 import cookieParser from "cookie-parser"
 
@@ -16,6 +17,7 @@ app.use(morgan("combined", {stream: writeLogger}))
 
 app.use("/v1", indexRouter)
 app.use("/v1/client", clientRouter)
+app.use("/v1/games", gameRouter)
 
 
 app.get("/", async (req, res) => {
